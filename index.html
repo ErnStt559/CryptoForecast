@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!-- saved from url=(0112)file:///C:/Users/vilny/Desktop/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BF%D0%B0%D0%BF%D0%BA%D0%B0%20(3)/donuts.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donuts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .content {
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .donuts {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .donut {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 250px;
+            text-align: center;
+            opacity: 0;
+            transform: translateX(-100%);
+            animation: slide-in 1s forwards ease-out;
+        }
+
+        .donut:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .donut:nth-child(3) {
+            animation-delay: 1s;
+        }
+
+        @keyframes slide-in {
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .donut img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        .description {
+            margin-top: 10px;
+            font-size: 1em;
+            color: #666;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation bar -->
+    <div class="navbar">
+        <a href="file:///C:/Users/vilny/Desktop/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BF%D0%B0%D0%BF%D0%BA%D0%B0%20(3)/donuts.html">Home</a>
+        <a href="file:///C:/Users/vilny/Desktop/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BF%D0%B0%D0%BF%D0%BA%D0%B0%20(3)/about.html">About</a>
+        <a href="file:///C:/Users/vilny/Desktop/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BF%D0%B0%D0%BF%D0%BA%D0%B0%20(3)/contact.html">Contact</a>
+    </div>
+
+    <!-- Main content -->
+    <div class="content" id="home">
+        <h1>Our Donuts</h1>
+        <div class="donuts">
+            <!-- Donut 1 -->
+            <div class="donut">
+                <img src="./Donuts_files/chocolate-donut.jpg" alt="Chocolate Donut">
+                <h2>Chocolate Donut</h2>
+                <p class="description">A chocolate donut made from pure chocolate and soft dough. If you want to enjoy a chocolatey treat, this is your choice!</p>
+            </div>
+            <!-- Donut 2 -->
+            <div class="donut">
+                <img src="./Donuts_files/strawberry-donut.jpg" alt="Strawberry Glazed Donut">
+                <h2>Strawberry Glazed Donut</h2>
+                <p class="description">A donut with strawberry glaze. If you crave something strawberry-flavored but don't know what, this is your pick!</p>
+            </div>
+            <!-- Donut 3 -->
+            <div class="donut">
+                <img src="./Donuts_files/orange-donut.jpg" alt="Orange Donut">
+                <h2>Orange Donut</h2>
+                <p class="description">Craving oranges and their flavor? This orange donut is your perfect choice!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Donuts © 2024</p>
+    </footer>
+
+
+
+</body></html>

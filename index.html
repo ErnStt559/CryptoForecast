@@ -263,6 +263,60 @@ text-decoration: underline; /* Add underline on hover for better UX */
 <li><a href="terms.html">Terms of Use</a></li>
 </ul>
 </footer>
-<script src="script.js"></script>
+
+
+<!-- COOKIE CONSENT BANNER -->
+<div id="cookie-consent">
+  <span>This site uses cookies. Accept?</span>
+  <button id="cookie-accept-btn">Accept</button>
+</div>
+
+<style>
+#cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #000;
+    color: #00ff88;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-top: 1px solid #00ff88;
+    z-index: 9999;
+}
+#cookie-consent button {
+    border: 1px solid #00ff88;
+    background: transparent;
+    color: #00ff88;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+#cookie-consent button:hover {
+    background: #00ff88;
+    color: #000;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var banner = document.getElementById('cookie-consent');
+  var btn = document.getElementById('cookie-accept-btn');
+
+  if (localStorage.getItem('cookiesAccepted') === 'true') {
+    banner.style.display = 'none';
+  }
+
+  btn.addEventListener('click', function () {
+    localStorage.setItem('cookiesAccepted', 'true');
+    banner.style.display = 'none';
+  });
+});
+</script>
+
 </body>
 </html>
